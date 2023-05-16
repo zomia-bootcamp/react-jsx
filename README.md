@@ -219,27 +219,17 @@ Instructions:
 2. Locate the JSX structure inside the `return` statement.
 3. Add a button element (`<button>`) at the desired location within the JSX structure. This button will serve as the "Random Quote" button.
 4. Assign an `onClick` event handler to the button element, using the provided code snippet: `onClick={handleRandomQuote}`.
-5. Define the `handleRandomQuote` function within the `Quote` component. This function will be responsible for selecting a random quote from the `quotes` array and updating the component state.
+5. Define the `handleRandomQuote` function within the `Quote` component. This function will be responsible for selecting a random quote from the `quotes` array and updating the displayed quote.
 6. Inside the `handleRandomQuote` function, use the provided code snippet to generate a random index and store it in a variable: `const randomIndex = Math.floor(Math.random() * quotes.length);`.
 7. Retrieve the randomly selected quote from the `quotes` array using the random index: `const randomQuote = quotes[randomIndex];`.
-8. Update the component state to reflect the selected quote, using the provided code snippet as a guide: `setState(randomQuote);` (replace `setState` with the appropriate state updater function for your component).
-9. Modify the JSX structure inside the `return` statement to display the selected quote using the appropriate state or variable values.
-10. Save the changes to `Quote.js`.
-11. Open the file where you are using the `Quote` component.
-12. If necessary, update the import statement to reflect the correct file path.
-13. Start the development server to see the rendered UI in your browser.
-14. Test the functionality by clicking the "Random Quote" button. You should see a random quote being displayed each time the button is clicked.
+8. Modify the JSX structure inside the `return` statement to display the selected quote by replacing the existing quote content with `randomQuote.title` and `randomQuote.src` in the appropriate places.
+9. Save the changes to `Quote.js`.
+10. Test the functionality by clicking the "Random Quote" button. You should see a random quote being displayed each time the button is clicked.
 
 Expected Result:
 After completing the steps, you should have a working "Random Quote" button in the `Quote` component. Clicking the button will select a random quote from the `quotes` array and display it on the page. Each click should result in a different quote being shown.
 
-Bonus:
-Once you've completed the task, you can further enhance the UI by adding styling to the button or displaying additional information related to the selected quote. You can also consider adding functionality to prevent the same quote from being selected consecutively or adding a reset button to start the random selection process again.
-
 Remember to consult the React documentation or other learning resources for guidance and assistance while completing this task. Happy coding!
-
-
-
 
 
 
