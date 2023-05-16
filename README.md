@@ -64,7 +64,42 @@ Select [`RedPanda.js`](./src/components/RedPanda.js) to see one way to do this.
 
 ### Exercises
 
-Go to [`MyQuote.js`](./src/components/MyQuote.js), and follow the instructions given under the title: "Components Attributes" .
+Go to [`MyQuote.js`](./src/components/MyQuote.js), and follow the instructions given under Part 2 .
+
+
+## Putting Logic in a Function Component
+
+A function component is required to have a return statement, but it can also contain other things, like simple calculations that need to be performed before returning the JSX element.
+
+Here's an example of performing calculations inside a function component:
+
+```jsx
+function RandomNumber() {
+  // First, some logic that needs to happen before returning
+  const n = Math.floor(Math.random() * 10 + 1);
+  // Next, a return statement that uses the calculated logic
+  return <h1>{n}</h1>;
+}
+```
+
+Be careful to avoid a common mistake like this:
+
+```jsx
+function RandomNumber() {
+  return (
+    const n = Math.floor(Math.random() * 10 + 1);
+    <h1>{n}</h1>
+  )
+}
+```
+What is wrong with the code above?
+
+In the above example, the line with the `const n` declaration is incorrect because it should come before the `return` statement. Placing it inside the return block will cause a syntax error.
+
+### Exercises
+
+Let's add some logic to our components in [`MyQuote.js`](./src/components/MyQuote.js).
+Follow the instructions given under Part 3.
 
 
 
@@ -77,31 +112,3 @@ Go to [`MyQuote.js`](./src/components/MyQuote.js), and follow the instructions g
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-In React, component variable attributes are properties or variables that you can define within a component to store and manipulate data. These attributes are specific to the component and can be used to control its behavior, appearance, and functionality.
-
-Here are a few key points about component variable attributes:
-
-1. **Data Storage**: Component variable attributes allow you to store and manage data within a component. You can define variables or properties inside a component to hold values, such as strings, numbers, arrays, objects, or even functions.
-
-2. **State Management**: In React, state is a special type of component variable attribute that represents the mutable data within a component. By using state, you can make your component dynamic and responsive to user interactions or data changes. State is typically defined using the `useState` hook.
-
-3. **Props**: Props (short for properties) are component variable attributes that allow you to pass data from a parent component to a child component. Props enable you to configure and customize child components based on the values provided by the parent component. Props are immutable, meaning they cannot be changed within the child component.
-
-4. **Dynamic Rendering**: Component variable attributes can control the rendering logic of a component. By modifying the values of these attributes, you can conditionally render different content, apply styles, or trigger specific behavior within your component.
-
-5. **Event Handling**: Component variable attributes are often used to define event handlers. You can assign functions to attributes like `onClick`, `onSubmit`, or `onChange` to handle user interactions or form submissions. These functions can access and modify other component variables or trigger other actions based on the event.
-
-Component variable attributes provide a flexible way to store, manipulate, and pass data within React components. They enable components to have their own internal state, respond to changes, and interact with other components in the application.
