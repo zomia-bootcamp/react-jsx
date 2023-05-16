@@ -96,6 +96,56 @@ What is wrong with the code above?
 
 In the above example, the line with the `const n` declaration is incorrect because it should come before the `return` statement. Placing it inside the return block will cause a syntax error.
 
+We can try it together in the [Friend.js](./src/components/Friend.js) file.
+
+```jsx
+import React from 'react';
+
+const friends = [
+  {
+    title: "Yummmmmmm",
+    src: "https://content.codecademy.com/courses/React/react_photo-monkeyweirdo.jpg"
+  },
+  {
+    title: "Hey Guys! Wait Up!",
+    src: "https://content.codecademy.com/courses/React/react_photo-earnestfrog.jpg"
+  },
+  {
+    title: "Yikes",
+    src: "https://content.codecademy.com/courses/React/react_photo-alpaca.jpg"
+  }
+];
+
+function RandomFriend() {
+  // Generate a random index to select a friend
+  const randomIndex = Math.floor(Math.random() * friends.length);
+  
+  // Get the randomly selected friend
+  const randomFriend = friends[randomIndex];
+  
+  // Render the JSX
+  return (
+    <div>
+      <h1>{randomFriend.title}</h1>
+      <img src={randomFriend.src} alt={randomFriend.title} />
+    </div>
+  );
+}
+
+export default RandomFriend;
+```
+
+In this example:
+
+1. We import React to use JSX syntax and define the `friends` array containing objects with `title` and `src` properties representing friends and their corresponding image URLs.
+2. We create a functional component called `RandomFriend`.
+3. Inside the `RandomFriend` component, we generate a random index using `Math.random()` and `Math.floor()` functions. This index will be used to select a random friend from the `friends` array.
+4. We retrieve the randomly selected friend from the `friends` array using the random index.
+5. We render JSX within the return statement, displaying the title of the random friend as a heading (`<h1>`) and the corresponding image using the `src` and `alt` attributes.
+6. Finally, we export the `RandomFriend` component as the default export, allowing it to be imported and used in other files.
+
+When you use the `RandomFriend` component in your application, it will render a random friend each time it is rendered or re-rendered.
+
 ### Exercises
 
 Let's add some logic to our components in [`MyQuote.js`](./src/components/MyQuote.js).
