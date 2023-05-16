@@ -148,12 +148,68 @@ When you use the `RandomFriend` component in your application, it will render a 
 
 ### Exercises
 
-Let's add some logic to our components in [`MyQuote.js`](./src/components/MyQuote.js).
-Follow the instructions given under Part 3.
+Refactor the code in `MyQuote.js` to have similar functionality as the `Friend.js` component. Create an array called `quotes` with objects containing `title` and `src` properties. Inside the `MyQuote` functional component, generate a random index using `Math.random()` and `Math.floor()`, and retrieve a random quote from the `quotes` array. Render a heading element displaying the quote's `title` property and an image element using the `src` property. Save the changes, import `MyQuote` in `App.js`, and render the `MyQuote` component. When running the React development server, `MyQuote` will randomly render a quote from the array each time it is rendered or re-rendered.
 
 
+## Use a Conditional in a Function Component
 
 
+To use a conditional statement inside a function component, you can follow this approach:
+
+It's important to note that the `if` statement is located inside the function component, but before the `return` statement.
+
+This is how it might look:
+
+```jsx
+function TodaysPlan() {
+  const weather = 'sunny';
+
+  if (weather === 'sunny') {
+    return <p>Today's plan: Go to the beach!</p>;
+  } else {
+    return <p>Today's plan: Stay at home and code.</p>;
+  }
+}
+```
+
+In the above example, we have a variable `weather` with the value `'sunny'`. The conditional statement checks if the weather is sunny, and if it is, it returns the JSX element `<p>Today's plan: Go to the beach!</p>`. Otherwise, if the weather is not sunny, it returns the JSX element `<p>Today's plan: Stay at home and code.</p>`.
+
+Remember to place the conditional statement before the `return` statement within the function component.
+
+
+### Group Activity
+
+Refactor the `Quote.js` component to include a condition in the rendering logic. Choose a condition based on your desired requirement, such as displaying an additional element only if a certain prop value is true. Inside the component's JSX structure, add an `if` statement or a conditional (ternary) operator to check the condition. Provide the JSX content to render when the condition is met, and optionally, an alternative content if the condition is not met. Save the changes, run the development server, and observe how the component's rendering adapts based on the condition you added. This task allows you to practice incorporating conditional rendering into your React components.
+
+
+## Event Listener and Handlers in a Component
+
+You can include event handlers in your function components to run specific code in response to interactions with the user interface, such as clicking.
+
+Let's take a look at an example:
+
+```jsx
+function MyComponent() {
+  function handleHover() {
+    alert('Stop it. Stop hovering.');
+  }
+  return <div onHover={handleHover}></div>;
+}
+```
+
+In the above example, we have an event handler called `handleHover()`. It is defined inside the function component and, by convention, starts with the word "handle" followed by the type of event it is handling.
+
+The logic for what should happen when the `<div>` is hovered over is contained within the `handleHover()` function. The function is then passed as a prop to the `<div>` element using the `onHover` attribute.
+
+Event handler functions are defined within the function component and are usually triggered by specific events.
+
+One thing to watch out for is that when passing the event handler function, such as `handleHover`, as a prop, we don't include parentheses after the function name. For example:
+
+```jsx
+return <div onHover={handleHover}></div>;
+```
+
+This is because passing it as `handleHover` indicates that it should be called only when the event occurs. If we were to pass it as `handleHover()`, it would immediately trigger the function instead of waiting for the event, so be cautious!
 
 
 
