@@ -62,7 +62,9 @@ How could you render a React component with an image of `redPanda` and its prope
 Select [`RedPanda.js`](./src/components/RedPanda.js) to see one way to do this.
 
 
+### Exercises
 
+Go to [`MyQuote.js`](./src/components/MyQuote.js), and follow the instructions given under the title: "Components Attributes" .
 
 
 
