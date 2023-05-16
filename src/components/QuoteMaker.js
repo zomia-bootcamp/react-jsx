@@ -8,8 +8,8 @@ function QuoteMaker() {
         </p>
         <cite>
           <a target="_blank"
-            href="https://en.wikipedia.org/wiki/Douglas_Huebler">
-            Douglas Huebler
+            href="https://en.wikipedia.org/wiki/Nelson_Mandela">
+            Nelson Mandela
           </a>
         </cite>
       </blockquote>
