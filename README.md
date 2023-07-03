@@ -36,6 +36,96 @@ In [`MyQuote.js`](./src/components/MyQuote.js), write a React component that ret
 
 Use QuoteMaker.js as a guide! Remember to import React at the top of the file, and remember to export your component at the bottom of the file.
 
+
+## Nested JSX: Creating Hierarchical JSX Structures
+
+In JSX, just like in HTML, you can nest JSX elements inside other JSX elements, forming a hierarchical structure.
+
+Here's an example of a JSX `<h1>` element nested inside a JSX `<a>` element:
+
+```jsx
+<a href="https://www.example.com"><h1>Click me!</h1></a>
+```
+
+To improve readability, you can use HTML-style line breaks and indentation:
+
+```jsx
+<a href="https://www.example.com">
+  <h1>
+    Click me!
+  </h1>
+</a>
+```
+
+When a JSX expression spans multiple lines, it's important to wrap the multi-line JSX expression in parentheses:
+
+```jsx
+(
+  <a href="https://www.example.com">
+    <h1>
+      Click me!
+    </h1>
+  </a>
+)
+```
+
+Nested JSX expressions can be assigned to variables, passed as function arguments, or used in any other way that non-nested JSX expressions can. Here's an example of a nested JSX expression saved as a variable:
+
+```jsx
+const theExample = (
+  <a href="https://www.example.com">
+    <h1>
+      Click me!
+    </h1>
+  </a>
+);
+```
+
+By leveraging nested JSX, you can create complex and structured JSX components to build dynamic and interactive user interfaces in React.
+
+### Exercises
+
+Follow the instructions in [div.js](./exercises/div.js).  
+
+  
+## JSX Outer Elements: The Rule of Having a Single Outermost Element
+
+There is an important rule in JSX that we haven't mentioned yet: **a JSX expression must have exactly one outermost element.**
+
+Let's illustrate this rule with an example:
+
+```jsx
+// Which example is valid jsx?
+
+const paragraphs = (
+  <div id="i-am-the-outermost-element">
+    <p>I am a paragraph.</p>
+    <p>I, too, am a paragraph.</p>
+  </div>
+);
+
+
+const paragraphs = (
+  <p>I am a paragraph.</p> 
+  <p>I, too, am a paragraph.</p>
+);
+```
+
+In the first example, the JSX expression has a single outermost element, which is the `<div>` element. Inside the `<div>`, we have two `<p>` elements.
+
+However, the second example violates the rule. It tries to have two outer elements, two `<p>` elements without being wrapped in another element. This is not allowed in JSX.
+
+If you encounter a situation where your JSX expression has multiple outer elements, the solution is straightforward: wrap the entire JSX expression in a `<div>` element (or any other suitable wrapper element).
+
+By ensuring that your JSX expression has a single outermost element, you can avoid errors and ensure that your JSX code is valid and well-structured.
+  
+
+### Exercises
+  
+  Follow the instructions in [blog.js](./exercises/blog.js)
+  
+  
+
 ## Variable Attributes in a Component
 
 Component variable attributes are like containers inside a component that can hold different types of information. Imagine a box with different labels on it, where you can store and retrieve things.
