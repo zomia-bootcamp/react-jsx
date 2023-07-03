@@ -39,7 +39,7 @@ Use QuoteMaker.js as a guide! Remember to import React at the top of the file, a
 
 ## Nested JSX: Creating Hierarchical JSX Structures
 
-In JSX, just like in HTML, you can nest JSX elements inside other JSX elements, forming a hierarchical structure.
+You have probably noticed by now, that in JSX, just like in HTML, you can nest JSX elements inside other JSX elements, forming a hierarchical structure.
 
 Here's an example of a JSX `<h1>` element nested inside a JSX `<a>` element:
 
