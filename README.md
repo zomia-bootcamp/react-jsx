@@ -85,7 +85,7 @@ By leveraging nested JSX, you can create complex and structured JSX components t
 
 ### Exercises
 
-Follow the instructions in [div.js](./exercises/div.js).  
+Follow the instructions in [div.js](./src/components/div.js).  
 
   
 ## JSX Outer Elements: The Rule of Having a Single Outermost Element
@@ -122,13 +122,13 @@ By ensuring that your JSX expression has a single outermost element, you can avo
 
 ### Exercises
   
-  Follow the instructions in [blog.js](./exercises/blog.js)
+  Follow the instructions in [blog.js](./src/components/blog.js)
   
   
 
 ## Variable Attributes in a Component
 
-Component variable attributes are like containers inside a component that can hold different types of information. Imagine a box with different labels on it, where you can store and retrieve things.
+Variable attributes in react, are like containers inside a component that can hold different types of information. Imagine a box with different labels on it, where you can store and retrieve things.
 
 In React, these attributes allow you to store and manage data within a component. For example, you can have a variable inside a component to hold a number, a piece of text, or even a list of items.
 
@@ -144,7 +144,7 @@ Take a look at this JavaScript object named redPanda:
 const redPanda = {
   src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Endangered_Red_Panda.jpg',
   alt: 'Red Panda',
-  width: '200px
+  width: '200px'
 };
 ```
 How could you render a React component with an image of `redPanda` and its properties?
@@ -305,21 +305,18 @@ This is because passing it as `handleHover` indicates that it should be called o
 
 Instructions:
 
-1. Open the `Quote.js` file in your code editor.
+1. Open the `MyQuote.js` file in your code editor.
 2. Locate the JSX structure inside the `return` statement.
 3. Add a button element (`<button>`) at the desired location within the JSX structure. This button will serve as the "Random Quote" button.
 4. Assign an `onClick` event handler to the button element, using the provided code snippet: `onClick={handleRandomQuote}`.
-5. Define the `handleRandomQuote` function within the `Quote` component. This function will be responsible for selecting a random quote from the `quotes` array and updating the displayed quote.
+5. Define the `handleRandomQuote` function within the `MyQuote` component. This function will be responsible for selecting a random quote from the `quotes` array and updating the displayed quote.
 6. Inside the `handleRandomQuote` function, use the provided code snippet to generate a random index and store it in a variable: `const randomIndex = Math.floor(Math.random() * quotes.length);`.
 7. Retrieve the randomly selected quote from the `quotes` array using the random index: `const randomQuote = quotes[randomIndex];`.
 8. Modify the JSX structure inside the `return` statement to display the selected quote by replacing the existing quote content with `randomQuote.title` and `randomQuote.src` in the appropriate places.
-9. Save the changes to `Quote.js`.
+9. Save the changes to `MyQuote.js`.
 10. Test the functionality by clicking the "Random Quote" button. You should see a random quote being displayed each time the button is clicked.
 
 Expected Result:
-After completing the steps, you should have a working "Random Quote" button in the `Quote` component. Clicking the button will select a random quote from the `quotes` array and display it on the page. Each click should result in a different quote being shown.
+After completing the steps, you should have a working "Random Quote" button in the `MyQuote` component. Clicking the button will select a random quote from the `quotes` array and display it on the page. Each click should result in a different quote being shown.
 
 Remember to consult the React documentation or other learning resources for guidance and assistance while completing this task. Happy coding!
-
-
-
