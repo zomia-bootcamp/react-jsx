@@ -307,14 +307,15 @@ Instructions:
 
 1. Open the `MyQuote.js` file in your code editor.
 2. Locate the JSX structure inside the `return` statement.
-3. Add a button element (`<button>`) at the desired location within the JSX structure. This button will serve as the "Random Quote" button.
-4. Assign an `onClick` event handler to the button element, using the provided code snippet: `onClick={handleRandomQuote}`.
-5. Define the `handleRandomQuote` function within the `MyQuote` component. This function will be responsible for selecting a random quote from the `quotes` array and updating the displayed quote.
-6. Inside the `handleRandomQuote` function, use the provided code snippet to generate a random index and store it in a variable: `const randomIndex = Math.floor(Math.random() * quotes.length);`.
-7. Retrieve the randomly selected quote from the `quotes` array using the random index: `const randomQuote = quotes[randomIndex];`.
-8. Modify the JSX structure inside the `return` statement to display the selected quote by replacing the existing quote content with `randomQuote.title` and `randomQuote.src` in the appropriate places.
-9. Save the changes to `MyQuote.js`.
-10. Test the functionality by clicking the "Random Quote" button. You should see a random quote being displayed each time the button is clicked.
+3. Add a button element (`<button>`) at the desired location within the JSX structure. This button will refresh the page to to render a random quote.
+4. Assign an `onClick` event handler to the button element, using the provided code snippet: `onClick={handleRefresh}`.
+5. Define the `handleRefresh` function within the `MyQuote` component. This function will be responsible for refreshing the page and triggering a new render with a new random quote from the  `quotes` array.
+6. Use your favorite search engine to figure out how to refresh your page with react.
+7. Inside the `MyQuote` component, use the provided code snippet to generate a random index and store it in a variable: `const randomIndex = Math.floor(Math.random() * quotes.length);`.
+8. Retrieve the randomly selected quote from the `quotes` array using the random index: `const randomQuote = quotes[randomIndex];`.
+9. Modify the JSX structure inside the `return` statement to display the selected quote by replacing the existing quote content with `randomQuote.title` and `randomQuote.src` in the appropriate places.
+10. Save the changes to `MyQuote.js`.
+11. Test the functionality by clicking the "Random Quote" button. You should see a random quote being displayed each time the button is clicked.
 
 Expected Result:
 After completing the steps, you should have a working "Random Quote" button in the `MyQuote` component. Clicking the button will select a random quote from the `quotes` array and display it on the page. Each click should result in a different quote being shown.

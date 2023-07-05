@@ -16,18 +16,17 @@ const friends = [
 ]
 
 function RandomFriend() {
-	let randomIndex ;
-console.log(randomIndex)
-   
+	// Generate a random index to select a friend
+	const randomIndex = Math.floor(Math.random() * friends.length)
+
+	// Get the randomly selected friend
+	const randomFriend = friends[randomIndex]
+
 	// Render the JSX
 	return (
 		<div>
-			<h1>{friends[randomIndex].title}</h1>
-			<img src={friends[randomIndex].src} alt={friends[randomIndex].title} />
-			<button
-				onClick={()=> randomIndex = Math.floor(Math.random() * friends.length)}>
-				Random Quote
-			</button>
+			<h1>{randomFriend.title}</h1>
+			<img src={randomFriend.src} alt={randomFriend.title} />
 		</div>
 	)
 }

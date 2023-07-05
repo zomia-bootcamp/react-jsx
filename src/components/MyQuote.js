@@ -24,11 +24,6 @@
 
 
 
-
-
-
-
-
 /*
 --- Part 2: Components Attributes ---
 
