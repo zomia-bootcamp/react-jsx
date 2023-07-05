@@ -24,11 +24,6 @@
 
 
 
-
-
-
-
-
 /*
 --- Part 2: Components Attributes ---
 
@@ -42,7 +37,7 @@ Start the development server to see the rendered UI in your browser. That way yo
 
 - Save the changes to MyQuote.js.
 
-- In the MyQuote component, Wrap the content of your reaturn statment with a <div></div> to insure one outmost elemnt.
+- In the MyQuote component, Wrap the content of your return statement with a <div></div> to insure one outmost element.
 
 - Nest an <h1> element inside of your <div> element.
 
@@ -54,14 +49,9 @@ Start the development server to see the rendered UI in your browser. That way yo
 
 Your <img /> should have two attributes:
 
-  1. an `src` of quote.src
-  2. an `alt` of quote.title
+  1. a `src` of quote.src
+  2. a `alt` of quote.title
 
 Save the changes to MyQuote.js.
 
 */
-
-
-
-
-
