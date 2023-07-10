@@ -15,6 +15,11 @@ Finally, return the myDiv variable.
 import React from 'react'
 
 function MyDiv() {  
+	const MyDiv = (
+		<div>
+			<h1>Hello world</h1>
+		</div>
+	)
 	return <div>Hello World</div>	
 }
 
